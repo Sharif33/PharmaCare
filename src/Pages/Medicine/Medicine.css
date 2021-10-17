@@ -1,0 +1,7 @@
+.cart-hover{
+    border: 1px solid white;
+}
+.cart-hover:hover{
+    border: 1px dashed green;
+    text-decoration: underline;
+}
