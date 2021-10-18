@@ -1,0 +1,16 @@
+.background{
+    background-image: url('../../images/student.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 25px;
+    overflow-x: hidden;
+}
+
+.heading{
+    color: #5769B0;
+    font-size: 40px;
+    line-height: 1.27em;
+    letter-spacing: .016em;
+    font-weight: 700;
+}
