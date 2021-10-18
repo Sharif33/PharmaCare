@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import './Medicine.css';
 
 const Medicine = ({ medicine }) => {
-    const { id, title, image, price, star } = medicine;
+    const { id, title, image, price } = medicine;
     return (
         <div>
-            <div className="col shadow rounded cart-hover">
+            <div className="col shadow rounded cart-hover text-center">
                 <div className="card h-100">
                     <img src={image} className="card-img-top" alt="" />
                     <div className="p-4">
@@ -27,7 +27,7 @@ const Medicine = ({ medicine }) => {
                     </div>
 
                     <div className="border-top p-2 text-center">
-                        <Link to=""><button className="btn btn-outline-success">See Details</button></Link>
+                        <Link to={`medicines/${id}`}><button className="btn btn-outline-success">See Details</button></Link>
                     </div>
                     {/*  <div className="border-top p-2">
                         <button className="btn btn-primary w-100"><Link style={{ textDecoration: "none", color: "white" }} to="/login">Join Now</Link></button>
