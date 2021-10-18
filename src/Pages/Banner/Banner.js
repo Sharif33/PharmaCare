@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import banner from '../../images/hospital1.jpg';
 import banner2 from '../../images/hospital2.jpg';
 import banner3 from '../../images/hospital3.jpg';
@@ -18,21 +19,21 @@ const Banner = () => {
                         <img src={banner2} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
                             <h1 className="m-5 font">Ranked #1 in the Nurology and Nurosergery</h1>
-                            <button className="btn btn-danger rounded-pill p-4 fs-4">Learn More</button>
+                            <button className="btn btn-outline-primary font rounded-pill p-4 fs-4">Learn More</button>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
                             <h1 className="m-5 font">One of the Nations Top 10 hospitals</h1>
-                            <button className="btn btn-danger rounded-pill p-4 fs-4">Learn More</button>
+                            <button className="btn btn-outline-primary rounded-pill p-4 fs-4 font">Learn More</button>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner3} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
                             <h1 className="m-5 font">We are transforming lives through lung transplants</h1>
-                            <button className="btn btn-danger rounded-pill p-4 fs-4">Learn More</button>
+                            <button className="btn btn-outline-primary font rounded-pill p-4 fs-4">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -50,17 +51,17 @@ const Banner = () => {
                     <div className="col-md-4 shadow p-5">
                         <h3 className="text-light">Our Doctors</h3>
                         <p className="text-light">Choose by name,speciality,city and more</p>
-                        <button style={{ color: "#5769B0" }} className="btn btn-light">FIND A DOCTOR</button>
+                        <Link to="/doctors"><button style={{ color: "#5769B0" }} className="btn btn-light">FIND A DOCTOR</button></Link>
                     </div>
                     <div className="col-md-4  p-5">
                         <h3 className="text-light">Locations & Directions</h3>
                         <p className="text-light">Find maps or more for locations</p>
-                        <button style={{ color: "#5769B0" }} className="btn btn-light">GET DIRECTIONS</button>
+                        <Link to="/about"><button style={{ color: "#5769B0" }} className="btn btn-light">GET DIRECTIONS</button></Link>
                     </div>
                     <div className=" col-md-4 shadow p-5">
                         <h3 className="text-light">Appoinments</h3>
                         <p className="text-light">More ways then ever to get the care you need</p>
-                        <button style={{ color: "#5769B0" }} className="btn btn-light">APPOINMENTS & ACCESS</button>
+                        <Link to="/login"><button style={{ color: "#5769B0" }} className="btn btn-light">APPOINMENTS & ACCESS</button></Link>
                     </div>
                 </div>
             </div>

@@ -5,16 +5,14 @@ const Details = () => {
 
     const { id } = useParams();
 
-    const [foods, setFoods] = useState([]);
+    const [medicines, setMedicines] = useState([]);
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Sharif33/simple-e-commerce/main/public/pharmacare.json')
             .then(res => res.json())
-            .then(data => setFoods(data))
+            .then(data => setMedicines(data))
     }, [])
 
-    const findFoods = foods.find(food => food.id == id)
-
-
+    const foundMedicine = medicines.find(medicine => medicine.id == id)
 
     return (
         <div>
@@ -22,8 +20,8 @@ const Details = () => {
             <div className='container py-5 my-5'>
                 <div className="row shadow">
                     <div className="col-md-6 border border-warning shadow text-center">
-                        <h2 className='mt-5'>{findFoods?.title}</h2>
-                        <img className='img-fluid' src={findFoods?.image} alt="" />
+                        <h2 className='mt-5'>{foundMedicine?.title}</h2>
+                        <img className='img-fluid' src={foundMedicine?.image} alt="" />
                     </div>
                     <div className="col-md-6 border p-4">
                         <div className="">
@@ -32,12 +30,12 @@ const Details = () => {
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i>
                                 <i className="fas fa-star"></i></span>
-                            </small>  <span> ({findFoods?.rating} customer review this)</span></h5>
+                            </small>  <span> ({foundMedicine?.rating} customer review this)</span></h5>
 
 
                         </div>
-                        <h2 className="text-info fw-bold py-3">${findFoods?.price}</h2>
-                        <p>{findFoods?.title} {findFoods?.description}</p>
+                        <h2 className="text-info fw-bold py-3">${foundMedicine?.price}</h2>
+                        <p>{foundMedicine?.title} {foundMedicine?.description}</p>
                         <div className="d-flex justify-content-between">
                             <button className="btn btn-success p-3 fs-5" title="Add to cart"><i className="fas fa-cart-plus"></i> Add to Cart</button>
                         </div>

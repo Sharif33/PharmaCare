@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Medicine.css';
 
-const Medicine = ({ medicine }) => {
-    const { id, title, image, price } = medicine;
+const Doctor = ({ doctor }) => {
+    const { id, name, image, speciality, contact, title, work } = doctor;
     return (
         <div>
-            <div className="col shadow rounded cart-hover text-center">
-                <div className="card h-100">
-                    <img src={image} className="card-img-top" alt="" />
+            <div className="col rounded cart-hover text-center mb-5">
+                <div className="card bg-light border-0 rounded h-100">
+                    <img src={image} style={{ marginTop: "-40px" }} className="card-img-top rounded-circle w-50 mx-auto shadow" alt="" />
                     <div className="p-4">
                         <div className="d-flex justify-content-center align-items-center">
                             <small className="fw-bold text-secondary"><span className="text-warning"><i className="fas fa-star"></i>
@@ -19,15 +18,17 @@ const Medicine = ({ medicine }) => {
                             </small>
 
                         </div>
-                        <h5 className="text-dark overflow">{title}</h5>
+                        <h5 className="text-dark">{name}</h5>
+                        <p className="text-warning">{speciality}</p>
+                        <p className="text-secondary">{title} {work}</p>
                         <div className="d-flex justify-content-between">
-                            <h4 className="text-danger fw-bold">${price}</h4>
-                            <button className="btn btn-outline-danger" title="Add to cart"><i className="fas fa-cart-plus"></i></button>
+                            <h6 className="text-secondary fw-bold">{contact}</h6>
+                            <button className="btn btn-success" title="Appointment">Appointment</button>
                         </div>
                     </div>
 
                     <div className="border-top p-2 text-center">
-                        <Link to={`medicines/${id}`}><button className="btn btn-outline-success">See Details</button></Link>
+                        <Link to={`doctor/${id}`}><button className="btn btn-outline-success">See Details</button></Link>
                     </div>
                 </div>
             </div>
@@ -35,4 +36,4 @@ const Medicine = ({ medicine }) => {
     );
 };
 
-export default Medicine;
+export default Doctor;

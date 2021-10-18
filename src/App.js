@@ -14,6 +14,9 @@ import Register from './Login/Login/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Students from './Pages/Students/Students';
+import Doctors from './Pages/Doctors/Doctors';
+import SingleDoctor from './Pages/SingleDoctor/SingleDoctor';
+import FindDoctors from './Pages/Doctors/FindDoctors';
 
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
             <Route exact path="/about">
               <AboutUs></AboutUs>
             </Route>
+            <Route exact path="/doctors">
+              <FindDoctors></FindDoctors>
+            </Route>
             <Route exact path="/students">
               <Students></Students>
             </Route>
@@ -40,6 +46,9 @@ function App() {
             </Route>
             <PrivateRoute exact path="/medicines/:id">
               <Details></Details>
+            </PrivateRoute>
+            <PrivateRoute exact path="/doctor/:id">
+              <SingleDoctor></SingleDoctor>
             </PrivateRoute>
             <Route exact path="/contact">
               <ContactUs></ContactUs>
