@@ -8,18 +8,62 @@ const Login = () => {
     const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error, signInUsingFb } = useAuth();
 
     return (
-        <div className="w-50 mx-auto shadow p-4">
-
+        <div style={{ overflowX: "hidden" }}>
             {
-                user.email ? <div className="text-center p-5">
-                    <img className="img-fluid" src={user.photoURL} alt="" />
-                    <h1 className='text-success'>{user.displayName}</h1>
-                    <h2>Welcome to Pharma Care family</h2>
-                    <Link to="/home"><button className="btn btn-primary" >Home</button></Link>
+                user.email ? <div className="row row-cols-1 row-cols-md-2 p-5">
+                    <div className="p-5 border border-success">
+                        <img className="img-fluid" src={user?.photoURL} alt="" />
+                        <h1 className='text-success'>{user?.displayName}</h1>
+                        <h2>Welcome to Pharma Care family</h2>
+                        <Link to="/home"><button className="btn btn-primary" >Home</button></Link>
+                    </div>
+                    <div className=" border border-info p-4 rounded">
+                        <form className="row g-3">
+                            <div className="col-md-12">
+                                <input type="text" className="form-control" placeholder="First name" aria-label="Your full name" />
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="inputAddress" className="form-label">Address</label>
+                                <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St" />
+                            </div>
+                            <div className="col-12">
+                                <label htmlFor="inputAddress2" className="form-label">Receiving Address</label>
+                                <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+                            </div>
+                            <div className="col-md-6">
+                                <label htmlFor="inputCity" className="form-label">City</label>
+                                <input type="text" className="form-control" id="inputCity" />
+                            </div>
+                            <div className="col-md-4">
+                                <label htmlFor="inputState" className="form-label">State</label>
+                                <select id="inputState" className="form-select">
+                                    <option>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div className="col-md-2">
+                                <label htmlFor="inputZip" className="form-label">Zip</label>
+                                <input type="text" className="form-control" id="inputZip" />
+                            </div>
+                            <div className="col-12">
+                                <div className="form-check">
+                                    <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required />
+                                    <label className="form-check-label" htmlFor="invalidCheck">
+                                        Agree to terms and conditions
+                                    </label>
+                                    <div className="invalid-feedback">
+                                        You must agree before submitting.
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 pt-3">
+                                <button type="submit" className="btn btn-primary">Procced</button>
+                            </div>
+                        </form>
+                    </div>
 
                 </div>
-
-                    : <div>
+                    : <div className="w-50 mx-auto shadow p-4">
                         <h3 className="text-center text-primary">Please {isLogin ? 'Login' : 'Register'}</h3>
                         <form onSubmit={handleRegistration}>
                             {!isLogin && <div className="mb-3">
@@ -49,11 +93,7 @@ const Login = () => {
                             <button onClick={signInUsingFb} title="SignIn with Facebook" className="btn border p-2 mx-2"><img style={{ width: "50px", height: "50px" }} src={fb} alt="" /></button> <br />
                         </div>
                     </div>
-
             }
-
-
-
         </div>
     );
 };

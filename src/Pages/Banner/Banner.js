@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import banner from '../../images/hospital1.jpg';
 import banner2 from '../../images/hospital2.jpg';
 import banner3 from '../../images/hospital3.jpg';
-import './Banner.css';
 
 const Banner = () => {
+    const style = {
+        fontSize: "3.5rem", color: "#052049", backgroundColor: "white", opacity: "65%", borderTopRightRadius: "50px", borderBottomLeftRadius: "50px", padding: "20px", fontWeight: "300"
+    }
     return (
         <div>
             <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
@@ -18,22 +20,22 @@ const Banner = () => {
                     <div className="carousel-item active">
                         <img src={banner2} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
-                            <h1 id="font" className="m-5 ">Ranked #1 in the Nurology and Nurosergery</h1>
-                            <button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button>
+                            <h1 style={style} className="m-5 ">Ranked #1 in the Nurology and Nurosergery</h1>
+                            <Link to="/about"><button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button></Link>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
-                            <h1 id="font" className="m-5">One of the Nations Top 10 hospitals</h1>
-                            <button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button>
+                            <h1 style={style} className="m-5">One of the Nations Top 10 hospitals</h1>
+                            <Link to="/about"><button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button></Link>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner3} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
-                            <h1 id="font" className="m-5">We are transforming lives through lung transplants</h1>
-                            <button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button>
+                            <h1 style={style} className="m-5">We are transforming lives through lung transplants</h1>
+                            <Link to="/about"><button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button></Link>
                         </div>
                     </div>
                 </div>

@@ -21,8 +21,8 @@ const SingleDoctor = () => {
                         <div className="col-md-6">
                             <img className='img-fluid rounded-circle' src={foundDoctor?.image} alt="" />
                         </div>
-                        <div className="p-4 col-md-6">
-                            <h2 style={{ color: "#62599F" }} className='mt-5'>{foundDoctor?.name}</h2>
+                        <div className="p-3 col-md-6">
+                            <h2 style={{ color: "#62599F" }} className='pt-5'>{foundDoctor?.name}</h2>
                             <p>{foundDoctor?.work}</p>
                             <h4 className="text-decoration-underline" style={{ color: "#005562" }}>{foundDoctor?.speciality}</h4>
                         </div>
@@ -38,10 +38,11 @@ const SingleDoctor = () => {
 
 
                         </div>
-                        <h2 className="text-info fw-bold py-3">{foundDoctor?.price}</h2>
+                        <h2 className="text-info fw-bold py-3">Fee: <span className="text-danger">${foundDoctor?.fee}</span></h2>
+
                         <p>{foundDoctor?.name} {foundDoctor?.reviews}</p>
                         <div className="d-flex justify-content-between">
-                            <p className="text-info">Accept New Patients</p>
+                            <p className="text-info"> <span className="text-danger">&#9733;</span> Accept New Patients</p>
                             <Link to="/doctors"><button style={{ backgroundColor: "#5769B0" }} className="btn text-light">Appointment</button></Link>
                         </div>
 

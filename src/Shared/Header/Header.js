@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const Header = () => {
@@ -16,18 +16,16 @@ const Header = () => {
     };
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={{ backgroundColor: "#63599E" }}>
                 <div className="container">
                     <NavLink className="navbar-brand fw-bold fs-2" to="/home">PharmaCare</NavLink>
-                    <div className="text-center">
-                        <img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
-                        <span className="text-light">{user?.displayName}</span>
-                    </div>
+
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav ms-auto">
+
                             <li className="nav-item">
                                 <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " aria-current="page" to="/home">Home</NavLink>
                             </li>
@@ -43,11 +41,19 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/contact">Contact Us</NavLink>
                             </li>
+
                             <li className="nav-item">
-                                {user?.email ? <button onClick={logOut} className="btn btn-danger">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/login">Sign In</NavLink>}
+                                {user?.email ? <button onClick={logOut} className="btn btn-danger">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/login">Sign In <span><i className="fas fa-user-alt-slash"></i></span> </NavLink>}
                             </li>
                         </ul>
+                        <div className="text-center">
+                            {user?.email && <Link to="/login"><img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
+                                <span className="text-light">{user?.displayName}</span></Link>}
+                        </div>
                     </div>
+
+
+
                 </div>
             </nav>
         </div>

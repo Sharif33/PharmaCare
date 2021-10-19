@@ -14,7 +14,6 @@ import Register from './Login/Login/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Students from './Pages/Students/Students';
-import Doctors from './Pages/Doctors/Doctors';
 import SingleDoctor from './Pages/SingleDoctor/SingleDoctor';
 import FindDoctors from './Pages/Doctors/FindDoctors';
 

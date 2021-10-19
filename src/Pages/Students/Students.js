@@ -10,7 +10,7 @@ const Students = () => {
                 <div className="row">
                     <div className="col-md-6"></div>
                     <div className="col-md-6 p-5">
-                        <p className="text-secondary">Students and Residents</p>
+                        <p className="text-secondary">Students and Careers</p>
                         <h1 className="heading py-5">Wealcoming Tommorow's Healthcare Leaders</h1>
                         <div>
                             <p>
@@ -28,15 +28,15 @@ const Students = () => {
                     <div className="row">
                         <div className="col-md-6 bg-font p-5">
                             <p>We offer high-quality, coordinated care for patients and families via phone, video, email and mobile applications.</p>
-                            <small className="fs-6">TeleHealth at Mass General</small>
+                            <small className="fs-6 text-success">TeleHealth at Mass General</small>
                         </div>
                         <div className="col-md-6 bg-font2 p-5">
                             <p>As the original and largest teaching hospital of Harvard Medical School, Mass General trains the next generation of leaders in science and medicine.</p>
                         </div>
                     </div>
                     <div className="p-5">
-                        <h2>We are committed to delivering the highest quality and safest care possible for every patient.</h2>
-                        <p className="pt-4">Quality & Safety at Mass General</p>
+                        <h2 style={{ color: "#005562", fontFamily: "sans-serif", fontWeight: "300" }}>We are committed to delivering the highest quality and safest care possible for every patient.</h2>
+                        <p className="pt-4 text-info">Quality & Safety at Mass General</p>
                     </div>
                 </div>
 

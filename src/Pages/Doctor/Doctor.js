@@ -22,7 +22,7 @@ const Doctor = ({ doctor }) => {
                         <p className="text-warning">{speciality}</p>
                         <p className="text-secondary">{title} {work}</p>
                         <div className="d-flex justify-content-between">
-                            <h6 className="text-secondary fw-bold">{contact}</h6>
+                            <h6 className="text-secondary fw-bold"><i className="fas fa-phone-alt"></i> {contact}</h6>
                             <button className="btn btn-success" title="Appointment">Appointment</button>
                         </div>
                     </div>
