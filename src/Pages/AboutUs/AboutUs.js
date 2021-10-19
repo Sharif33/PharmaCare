@@ -5,7 +5,7 @@ import about3 from '../../images/career3.png';
 
 const AboutUs = () => {
     return (
-        <div>
+        <div style={{ overflowX: "hidden" }}>
             <div className="bg-light">
                 <div className="text-center border-bottom border-warning mb-4 p-4">
                     <h3 className="fw-bold">About Us</h3>

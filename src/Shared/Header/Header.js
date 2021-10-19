@@ -27,23 +27,26 @@ const Header = () => {
                         <ul className="navbar-nav ms-auto">
 
                             <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " aria-current="page" to="/home">Home</NavLink>
+                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " aria-current="page" to="/home">Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/about">About Us</NavLink>
+                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/about">About Us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/doctors">Doctors</NavLink>
+                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/doctors">Doctors</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/students">Students & Career</NavLink>
+                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/medicine">Medicines</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/contact">Contact Us</NavLink>
+                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/students">Students & Career</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/contact">Contact Us</NavLink>
                             </li>
 
                             <li className="nav-item">
-                                {user?.email ? <button onClick={logOut} className="btn btn-danger">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-3 fs-5 " to="/login">Sign In <span><i className="fas fa-user-alt-slash"></i></span> </NavLink>}
+                                {user?.email ? <button onClick={logOut} className="btn btn-danger">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/login">Sign In <span><i className="fas fa-user-alt-slash"></i></span> </NavLink>}
                             </li>
                         </ul>
                         <div className="text-center">

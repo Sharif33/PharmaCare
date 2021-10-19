@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AllDoctors = ({ doctor }) => {
-    const { id, name, image, speciality, contact, title, work } = doctor;
+const AllMedicines = ({ medicine }) => {
+    const { id, title, image, price } = medicine;
     return (
         <div>
-            <div className="col rounded cart-hover text-center">
+            <div className="col shadow rounded cart-hover text-center">
                 <div className="card h-100">
                     <img src={image} className="card-img-top" alt="" />
                     <div className="p-4">
@@ -18,17 +18,15 @@ const AllDoctors = ({ doctor }) => {
                             </small>
 
                         </div>
-                        <h5 className="text-dark">{name}</h5>
-                        <p className="text-warning">{speciality}</p>
-                        <p className="text-secondary">{title} {work}</p>
+                        <h5 className="text-dark overflow">{title}</h5>
                         <div className="d-flex justify-content-between">
-                            <h6 className="text-secondary fw-bold"><i className="fas fa-phone-alt"></i> {contact}</h6>
-                            <Link to={`doctor/${id}`}><button className="btn btn-success" title="Appointment">Appointment</button></Link>
+                            <h4 className="text-danger fw-bold">${price}</h4>
+                            <button className="btn btn-outline-danger" title="Add to cart"><i className="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
 
                     <div className="border-top p-2 text-center">
-                        <Link to={`doctor/${id}`}><button className="btn btn-outline-success">See Details</button></Link>
+                        <Link to={`medicines/${id}`}><button className="btn btn-outline-success">See Details</button></Link>
                     </div>
                 </div>
             </div>
@@ -36,4 +34,4 @@ const AllDoctors = ({ doctor }) => {
     );
 };
 
-export default AllDoctors;
+export default AllMedicines;

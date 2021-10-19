@@ -23,7 +23,7 @@ const Doctor = ({ doctor }) => {
                         <p className="text-secondary">{title} {work}</p>
                         <div className="d-flex justify-content-between">
                             <h6 className="text-secondary fw-bold"><i className="fas fa-phone-alt"></i> {contact}</h6>
-                            <button className="btn btn-success" title="Appointment">Appointment</button>
+                            <Link to={`doctor/${id}`}><button className="btn btn-success" title="Appointment">Appointment</button></Link>
                         </div>
                     </div>
 

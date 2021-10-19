@@ -1,11 +1,10 @@
 import React from 'react';
 import google from '../../images/google.png';
-import fb from '../../images/fb.png';
 import useAuth from '../../hooks/useAuth';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error, signInUsingFb } = useAuth();
+    const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error } = useAuth();
 
     return (
         <div style={{ overflowX: "hidden" }}>
@@ -57,7 +56,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <div className="col-12 pt-3">
-                                <button type="submit" className="btn btn-primary">Procced</button>
+                                <Link to="/home"><button type="submit" className="btn btn-primary">Procced</button></Link>
                             </div>
                         </form>
                     </div>
@@ -90,7 +89,6 @@ const Login = () => {
                         <div className="text-center">
                             <p>or SignIn with</p>
                             <button onClick={signInUsingGoogle} title="SignIn with Google" className="btn border p-2 mx-2"><img style={{ width: "50px", height: "50px" }} src={google} alt="" /></button>
-                            <button onClick={signInUsingFb} title="SignIn with Facebook" className="btn border p-2 mx-2"><img style={{ width: "50px", height: "50px" }} src={fb} alt="" /></button> <br />
                         </div>
                     </div>
             }

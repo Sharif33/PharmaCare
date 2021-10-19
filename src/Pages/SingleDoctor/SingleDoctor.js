@@ -43,7 +43,7 @@ const SingleDoctor = () => {
                         <p>{foundDoctor?.name} {foundDoctor?.reviews}</p>
                         <div className="d-flex justify-content-between">
                             <p className="text-info"> <span className="text-danger">&#9733;</span> Accept New Patients</p>
-                            <Link to="/doctors"><button style={{ backgroundColor: "#5769B0" }} className="btn text-light">Appointment</button></Link>
+                            <Link to="/login"><button style={{ backgroundColor: "#5769B0" }} className="btn text-light">Appointment</button></Link>
                         </div>
 
                     </div>

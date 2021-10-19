@@ -37,7 +37,8 @@ const Details = () => {
                         <h2 className="text-info fw-bold py-3">${foundMedicine?.price}</h2>
                         <p>{foundMedicine?.title} {foundMedicine?.description}</p>
                         <div className="d-flex justify-content-between">
-                            <button className="btn btn-success p-3 fs-5" title="Add to cart"><i className="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button className="btn btn-success p-3" title="Add to cart"><i className="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button className="btn btn-outline-info p-3" title="Add to wishlist"><i className="fas fa-heart"></i> Add to wishlisht</button>
                         </div>
                     </div>
                 </div>

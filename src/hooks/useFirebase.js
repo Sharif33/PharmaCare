@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, FacebookAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 import initializeAuthentiation from '..//Firebase/firebase.init';
 
 initializeAuthentiation();
@@ -26,17 +26,6 @@ const useFirebase = () => {
                 setUser(result.user);
             })
             .finally(() => setIsLoading(false));
-    }
-    // facebook sign in
-    const signInUsingFb = () => {
-        setIsLoading(true)
-        const fbProvider = new FacebookAuthProvider();
-        signInWithPopup(auth, fbProvider)
-            .then(result => {
-                setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
-
     }
 
     // email and password sign in
@@ -140,7 +129,6 @@ const useFirebase = () => {
         user,
         isLoading,
         signInUsingGoogle,
-        signInUsingFb,
         logOut,
         email,
         pass,

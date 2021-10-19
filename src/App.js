@@ -16,6 +16,7 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Students from './Pages/Students/Students';
 import SingleDoctor from './Pages/SingleDoctor/SingleDoctor';
 import FindDoctors from './Pages/Doctors/FindDoctors';
+import FindMedicine from './Pages/FindMedicine/FindMedicine';
 
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route exact path="/doctors">
               <FindDoctors></FindDoctors>
+            </Route>
+            <Route exact path="/medicine">
+              <FindMedicine></FindMedicine>
             </Route>
             <Route exact path="/students">
               <Students></Students>
