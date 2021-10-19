@@ -3,8 +3,8 @@ import React from 'react';
 const AboutUs = () => {
     return (
         <div>
-            <div className="bg-light mx-auto container">
-                <div className="text-center border-bottom border-warning container m-4 p-4">
+            <div className="bg-light">
+                <div className="text-center border-bottom border-warning mb-4 p-4">
                     <h3 className="fw-bold">About Us</h3>
 
                     <div className="container pt-4">
@@ -84,7 +84,7 @@ const AboutUs = () => {
                                     Our mission is to improve the health of the individuals and communities we serve. <br />
 
                                     VISION STATEMENT <br />
-                                    PharmaCare Health System will become the national model for the delivery of urban health care. <br />
+                                    Sinai Health System will become the national model for the delivery of urban health care. <br />
 
                                     VALUE STATEMENT <br />
 
