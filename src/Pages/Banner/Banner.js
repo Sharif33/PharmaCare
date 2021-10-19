@@ -18,22 +18,22 @@ const Banner = () => {
                     <div className="carousel-item active">
                         <img src={banner2} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
-                            <h1 className="m-5 font">Ranked #1 in the Nurology and Nurosergery</h1>
-                            <button className="btn btn-outline-primary font rounded-pill p-4 fs-4">Learn More</button>
+                            <h1 id="font" className="m-5 ">Ranked #1 in the Nurology and Nurosergery</h1>
+                            <button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
-                            <h1 className="m-5 font">One of the Nations Top 10 hospitals</h1>
-                            <button className="btn btn-outline-primary rounded-pill p-4 fs-4 font">Learn More</button>
+                            <h1 id="font" className="m-5">One of the Nations Top 10 hospitals</h1>
+                            <button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button>
                         </div>
                     </div>
                     <div className="carousel-item">
                         <img src={banner3} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block p-5 m-5">
-                            <h1 className="m-5 font">We are transforming lives through lung transplants</h1>
-                            <button className="btn btn-outline-primary font rounded-pill p-4 fs-4">Learn More</button>
+                            <h1 id="font" className="m-5">We are transforming lives through lung transplants</h1>
+                            <button className="btn btn-primary rounded-pill p-4 fs-4">Learn More</button>
                         </div>
                     </div>
                 </div>
