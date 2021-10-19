@@ -17,9 +17,11 @@ const SingleDoctor = () => {
         <div>
             <div className='container py-5 my-5'>
                 <div className="row">
-                    <div className="col-md-6 border border-warning shadow-lg d-flex justify-content-between">
-                        <img className='img-fluid rounded-circle' src={foundDoctor?.image} alt="" />
-                        <div className="p-4">
+                    <div className="col-md-6 border border-warning shadow-lg row mx-auto">
+                        <div className="col-md-6">
+                            <img className='img-fluid rounded-circle' src={foundDoctor?.image} alt="" />
+                        </div>
+                        <div className="p-4 col-md-6">
                             <h2 style={{ color: "#62599F" }} className='mt-5'>{foundDoctor?.name}</h2>
                             <p>{foundDoctor?.work}</p>
                             <h4 className="text-decoration-underline" style={{ color: "#005562" }}>{foundDoctor?.speciality}</h4>

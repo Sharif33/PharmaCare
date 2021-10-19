@@ -14,3 +14,19 @@
     letter-spacing: .016em;
     font-weight: 700;
 }
+
+.bg-font{
+    background-color: #e4fe63!important;
+    font-size: 1.7rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-weight: 300;
+    color: #313d4e;
+}
+
+.bg-font2{
+    background-color: #b3d4fc;
+    font-size: 1.7rem;
+    font-weight: 300;   
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: #313d4e;
+}
