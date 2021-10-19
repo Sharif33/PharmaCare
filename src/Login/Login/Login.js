@@ -20,7 +20,7 @@ const Login = () => {
                     <div className=" border border-info p-4 rounded">
                         <form className="row g-3">
                             <div className="col-md-12">
-                                <input type="text" className="form-control" placeholder="First name" aria-label="Your full name" />
+                                <input type="text" className="form-control" placeholder="Your full name" aria-label="Your full name" />
                             </div>
                             <div className="col-12">
                                 <label htmlFor="inputAddress" className="form-label">Address</label>
