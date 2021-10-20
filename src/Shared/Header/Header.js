@@ -50,8 +50,8 @@ const Header = () => {
                             </li>
                         </ul>
                         <div className="text-center">
-                            <Link to="/login"><img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
-                                <span className="text-light">{user?.displayName}</span></Link>
+                            {user?.displayName && <Link to="/login"><img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
+                                <span className="text-light">{user?.displayName}</span></Link>}
                         </div>
                     </div>
                 </div>
