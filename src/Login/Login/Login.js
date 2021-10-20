@@ -9,9 +9,9 @@ const Login = () => {
     return (
         <div style={{ overflowX: "hidden" }}>
             {
-                user.email ? <div className="row row-cols-1 row-cols-md-2 p-5">
-                    <div className="p-5 border border-success">
-                        <img className="img-fluid" src={user?.photoURL} alt="" />
+                user?.displayName ? <div className="row row-cols-1 row-cols-md-2 p-5">
+                    <div className="p-5 border border-success text-center">
+                        <img className="img-fluid rounded-circle" src={user?.photoURL} alt="" />
                         <h1 className='text-success'>{user?.displayName}</h1>
                         <h2>Welcome to Pharma Care family</h2>
                         <Link to="/home"><button className="btn btn-primary" >Home</button></Link>
@@ -62,8 +62,8 @@ const Login = () => {
                     </div>
 
                 </div>
-                    : <div className="w-50 mx-auto shadow p-4">
-                        <h3 className="text-center text-primary">Please {isLogin ? 'Login' : 'Register'}</h3>
+                    : <div className="col-md-4 my-5 mx-auto shadow p-4">
+                        <h3 className="text-center text-primary p-3">Please {isLogin ? 'Login' : 'Register'}</h3>
                         <form onSubmit={handleRegistration}>
                             {!isLogin && <div className="mb-3">
                                 <input onBlur={handleNameChange} type="text" className="form-control" placeholder="Your name" aria-label="First name" />

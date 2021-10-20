@@ -5,7 +5,7 @@ const FindMedicine = () => {
     const [medicines, setMedicines] = useState([]);
 
     useEffect(() => {
-        fetch('./pharmacare.json')
+        fetch('https://raw.githubusercontent.com/Sharif33/simple-e-commerce/main/public/pharmacare.json')
             .then(res => res.json())
             .then(data => setMedicines(data))
     }, [])

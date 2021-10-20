@@ -46,17 +46,14 @@ const Header = () => {
                             </li>
 
                             <li className="nav-item">
-                                {user?.email ? <button onClick={logOut} className="btn btn-danger">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/login">Sign In <span><i className="fas fa-user-alt-slash"></i></span> </NavLink>}
+                                {user?.displayName ? <button onClick={logOut} className="btn btn-danger">Logout</button> : <NavLink activeStyle={activeStyle} className="nav-link active mx-2 fs-5 " to="/login">Sign In <span><i className="fas fa-user"></i></span> </NavLink>}
                             </li>
                         </ul>
                         <div className="text-center">
-                            {user?.email && <Link to="/login"><img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
-                                <span className="text-light">{user?.displayName}</span></Link>}
+                            <Link to="/login"><img className="img-fluid w-25 rounded-circle px-2" src={user?.photoURL} alt="" />
+                                <span className="text-light">{user?.displayName}</span></Link>
                         </div>
                     </div>
-
-
-
                 </div>
             </nav>
         </div>
