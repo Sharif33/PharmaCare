@@ -1,10 +1,22 @@
 import React from 'react';
 import google from '../../images/google.png';
 import useAuth from '../../hooks/useAuth';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 
 const Login = () => {
-    const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error } = useAuth();
+    const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error, processLogin } = useAuth();
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
+
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri);
+            })
+    }
 
     return (
         <div style={{ overflowX: "hidden" }}>
@@ -88,7 +100,7 @@ const Login = () => {
 
                         <div className="text-center">
                             <p>or SignIn with</p>
-                            <button onClick={signInUsingGoogle} title="SignIn with Google" className="btn border p-2 mx-2"><img style={{ width: "50px", height: "50px" }} src={google} alt="" /></button>
+                            <button onClick={handleGoogleLogin} title="SignIn with Google" className="btn border p-2 mx-2"><img style={{ width: "50px", height: "50px" }} src={google} alt="" /></button>
                         </div>
                     </div>
             }
