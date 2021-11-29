@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, updateProfile } from "firebase/auth";
-import initializeAuthentiation from '..//Firebase/firebase.init';
+import initializeAuthentication from '../Firebase/firebase.init';
 
-initializeAuthentiation();
+
+initializeAuthentication();
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
@@ -121,7 +122,7 @@ const useFirebase = () => {
             setIsLoading(false);
         });
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     return {
         user,

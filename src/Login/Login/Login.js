@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 
 const Login = () => {
-    const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error, processLogin } = useAuth();
+    const { user, handleEmailChange, signInUsingGoogle, handleNameChange, handlePassChange, isLogin, handleRegistration, handleResetPassword, toggleLogin, error } = useAuth();
 
     const location = useLocation();
     const history = useHistory();

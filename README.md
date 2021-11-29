@@ -2,6 +2,16 @@
 
 ## https://pharma-care-sharif33.web.app/
 
+### Technology used : 
+- React JS, React Router dom, Bootsrap5, CSS3, Firebase.
+
+## Overview :
+-	Front-End based website with firebase authentication and Static API.
+-	Users can sign in / sign up using a Google Account in addition to their email and password.
+-	After signin Users can view doctor and medicine details and  make appoinments with doctors.
+-  Responsived for mobile and large devices.
+
+
 ## Why Choose Us:
 
 - Our mission is to improve the health of the individuals and communities we serve.
